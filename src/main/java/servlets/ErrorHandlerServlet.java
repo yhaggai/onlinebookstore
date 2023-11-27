@@ -59,13 +59,13 @@ public class ErrorHandlerServlet extends HttpServlet {
             RequestDispatcher rd = req.getRequestDispatcher("CustomerHome.html");
             rd.include(req, res);
             StoreUtil.setActiveTab(pw, "home");
-            showErrorMessage(pw, errorCode, errorMessage);
+            showErrorMessage2(pw, errorCode, errorMessage);
 
         } else if (StoreUtil.isLoggedIn(UserRole.SELLER, req.getSession())) {
             RequestDispatcher rd = req.getRequestDispatcher("SellerHome.html");
             rd.include(req, res);
             StoreUtil.setActiveTab(pw, "home");
-            showErrorMessage(pw, errorCode, errorMessage);
+            showErrorMessage2(pw, errorCode, errorMessage);
 
         } else {
             RequestDispatcher rd = req.getRequestDispatcher("index.html");
@@ -81,6 +81,17 @@ public class ErrorHandlerServlet extends HttpServlet {
 
     private void showErrorMessage(PrintWriter pw, String errorCode, String errorMessage) {
         pw.println("<div class='container my-5'>"
+                + "<div class=\"alert alertjj-success\" role=\"alert\" style='max-width:450px; text-align:center; margin:auto;'>\r\n"
+                + "  <h4 class=\"alert-heading\">"
+                + errorCode
+                + "</h4>\r\n"
+                + "  <hr>\r\n"
+                + "  <p class=\"mb-0\">"
+                + errorMessage
+                + "</p>\r\n"
+                + "</div>"
+                + "</div>");
+                   pw.println("<div class='container my-5'>"
                 + "<div class=\"alert alertjj-success\" role=\"alert\" style='max-width:450px; text-align:center; margin:auto;'>\r\n"
                 + "  <h4 class=\"alert-heading\">"
                 + errorCode
