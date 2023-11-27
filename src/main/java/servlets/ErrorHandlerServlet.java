@@ -92,7 +92,18 @@ public class ErrorHandlerServlet extends HttpServlet {
                 + "</div>"
                 + "</div>");
                    pw.println("<div class='container my-5'>"
-                + "<div class=\"alert alertjj-success\" role=\"alert\" style='max-width:450px; text-align:center; margin:auto;'>\r\n"
+                + "<div class=\"alert alertjj-succekkkss\" role=\"alert\" style='max-width:450px; text-align:center; margin:auto;'>\r\n"
+                + "  <h4 class=\"alert-heading\">"
+                + errorCode
+                + "</h4>\r\n"
+                + "  <hr>\r\n"
+                + "  <p class=\"mb-0\">"
+                + errorMessage
+                + "</p>\r\n"
+                + "</div>"
+                + "</div>");
+                     pw.println("<div class='container my-5'>"
+                + "<div class=\"alert alertjj-succekkkss\" role=\"alert\" style='max-width:450px; text-align:center; margin:auto;'>\r\n"
                 + "  <h4 class=\"alert-heading\">"
                 + errorCode
                 + "</h4>\r\n"
