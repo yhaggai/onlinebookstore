@@ -81,7 +81,21 @@ public class ErrorHandlerServlet extends HttpServlet {
 
     private void showErrorMessage(PrintWriter pw, String errorCode, String errorMessage) {
         pw.println("<div class='container my-5'>"
-                + "<div class=\"alert alert-success\" role=\"alert\" style='max-width:450px; text-align:center; margin:auto;'>\r\n"
+                + "<div class=\"alert alertjj-success\" role=\"alert\" style='max-width:450px; text-align:center; margin:auto;'>\r\n"
+                + "  <h4 class=\"alert-heading\">"
+                + errorCode
+                + "</h4>\r\n"
+                + "  <hr>\r\n"
+                + "  <p class=\"mb-0\">"
+                + errorMessage
+                + "</p>\r\n"
+                + "</div>"
+                + "</div>");
+
+    }
+    private void showErrorMessage2(PrintWriter pw, String errorCode, String errorMessage) {
+        pw.println("<div class='container my-5'>"
+                + "<div class=\"alert alertjj-success\" role=\"alert\" style='max-width:450px; text-align:center; margin:auto;'>\r\n"
                 + "  <h4 class=\"alert-heading\">"
                 + errorCode
                 + "</h4>\r\n"
